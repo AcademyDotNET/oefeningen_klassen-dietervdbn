@@ -6,7 +6,7 @@ namespace klassenOefeningen
     {
         static void Main(string[] args)
         {
-
+            
             Resultaat mijnpunten = new Resultaat();
             mijnpunten.Percentage = 65;
             mijnpunten.PrintGraad();
@@ -30,10 +30,38 @@ namespace klassenOefeningen
             student1.PuntenWebTech = 13;
 
             student1.GeefOverzicht();
+            
 
             Pizza hawai = new Pizza();
-            Pizza prochutto = new Pizza();
-            hawai.toppings = "annanas";
+            Console.WriteLine($"Ingave diameter");
+            int diameter = IngaveInt();
+            hawai.Diameter = diameter;
+            Console.WriteLine($"Ingave toppings");
+            string toppings = Console.ReadLine();
+            hawai.Toppings = toppings;
+            Console.WriteLine($"Ingave prijs");
+            double prijs = IngaveDouble();
+            hawai.Price = prijs;
+
+        }
+
+        private static int IngaveInt()
+        {
+            int diameter = 0;
+            do
+            {
+                diameter = Convert.ToInt32(Console.ReadLine());
+            } while (diameter <= 0);
+            return diameter;
+        }
+        private static double IngaveDouble()
+        {
+            double prijs = 0;
+            do
+            {
+                prijs = Convert.ToDouble(Console.ReadLine());
+            } while (prijs <= 0);
+            return prijs;
         }
     }
 }

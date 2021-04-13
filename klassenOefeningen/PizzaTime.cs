@@ -6,15 +6,41 @@ namespace klassenOefeningen
 {
     class Pizza
     {
-        private string toppings { get; set; }
-        private int diameter { get; set; }
-        private double price { get; set; }
-
-        IngaveToppings();
-
-        public string IngaveToppings()
+        private string toppings;
+        public string Toppings
         {
-
+            get
+            {
+                return toppings;
+            }
+            set
+            {
+                toppings = value;
+            }
+        }
+        private int diameter;
+        public int Diameter    
+        {
+            get
+            {
+                return diameter;
+            }
+            set
+            {
+                diameter = value;
+            }
+        }
+        private double price;
+        public double Price
+        {
+            get
+            {
+                return price;
+            }
+            set
+            {
+                price = value;
+            }
         }
     }
 }
