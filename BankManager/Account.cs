@@ -41,5 +41,17 @@ namespace BankManager
         {
             Console.WriteLine($"Je totale balans is: {bedrag}");
         }        
+        public void MaakNieuweKlantAan()
+        {
+            Console.WriteLine("Wat is je naam?");
+            string naam = Console.ReadLine();
+            Console.WriteLine("Wat is je rekeningnummer?");
+            long reknummer =Convert.ToInt64(Console.ReadLine());            
+            Console.WriteLine("Wat is je balans?");
+            double balans = Convert.ToDouble(Console.ReadLine());
+            Naam = naam;
+            Bedrag = balans;
+            RekeningNummer = reknummer;
+        }
     }
 }
