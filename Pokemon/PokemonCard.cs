@@ -6,6 +6,72 @@ namespace Pokemon
 {
     class PokemonCard
     {
+        public PokemonCard()
+        {
+            HP_Base = 10;
+            Attack_Base = 10;
+            Defense_Base = 10;
+            SpecialAttack_Base = 10;
+            SpecialDefense_Base = 10;
+            Speed_Base = 10;
+        }
+        public PokemonCard(int hp, int att, int def, int spAtt, int spDef, int speed)
+        {
+            HP_Base = hp;
+            Attack_Base = att;
+            Defense_Base = def;
+            SpecialAttack_Base = spAtt;
+            SpecialDefense_Base = spDef;
+            Speed_Base = speed;
+        }
+        private static int amountLevelsUp;
+        private static int amountBattles;
+        private static int amountOffDraws;
+        private static int amountOffNewPokemons;
+        public static int AmountLevelsUp 
+        {
+            get
+            {
+                return amountLevelsUp;
+            }
+            set
+            {
+                amountLevelsUp = value;
+            }
+        }
+        public static int AmountBattles
+        {
+            get
+            {
+                return amountBattles;
+            }
+            set
+            {
+                amountBattles = value;
+            }
+        }
+        public static int AmountOffDraws
+        {
+            get
+            {
+                return amountOffDraws;
+            }
+            set
+            {
+                amountOffDraws = value;
+            }
+        }
+        public static int AmountOffNewPokemons
+        {
+            get
+            {
+                return amountOffNewPokemons;
+            }
+            set
+            {
+                amountOffNewPokemons = value;
+            }
+        }
         private int hitPoints;
         private int AttackPoints;
         private int DefPoints;
@@ -13,6 +79,18 @@ namespace Pokemon
         private int SpecialDefense;
         private int Speed;
         private int level = 1;
+        private bool noLevelingAllowed = false;
+        public bool NoLevelingAllowed
+        {
+            get
+            {
+                return noLevelingAllowed;
+            }
+            set
+            {
+                noLevelingAllowed = value;
+            }
+        }
         public int HP_Base
         {
             get
@@ -151,8 +229,16 @@ namespace Pokemon
         }
         public void LevelUp()
         {
+            if (NoLevelingAllowed == true)
+            {
+                Console.WriteLine($"Leveling is not allowed for this pokemon");
+            }
+            else
+            {
                 level++;
+                AmountLevelsUp++;
                 ShowInfo();
+            }
         }
         public void CreatePokemon(string name, int nummer, int hp, int attack, int def, int spAtt, int spDef, int speed)
         {
@@ -183,6 +269,79 @@ namespace Pokemon
             Console.WriteLine($"\t * Defense = {Defense_Full}");
             Console.WriteLine($"\t * SpecialAttack = {SpecialAttack_Full}");
             Console.WriteLine($"\t * SpecialDefens = {SpecialDefens_Full}");
+        }
+        public static void Info()
+        {
+            Console.WriteLine($"Battle fought: \t \t {AmountBattles}");
+            Console.WriteLine($"Amound of draws: \t {AmountOffDraws}");
+            Console.WriteLine($"Amound of new pokemons:  {AmountOffNewPokemons}");
+            Console.WriteLine($"Amound of levels up:\t {AmountLevelsUp}");
+        }
+        public static PokemonCard GeneratorPokemon()
+        {
+            AmountOffNewPokemons++;
+            PokemonCard newPokemon = new PokemonCard();
+            Random rand = new Random();
+            newPokemon.HP_Base = rand.Next(10, 51);
+            newPokemon.Attack_Base = rand.Next(1, 21);
+            newPokemon.Defense_Base = rand.Next(1, 21);
+            newPokemon.SpecialAttack_Base = rand.Next(1, 21);
+            newPokemon.SpecialDefense_Base = rand.Next(1, 21);
+            newPokemon.Speed_Base = rand.Next(1, 21);
+            return newPokemon;
+        }
+        public static PokemonCard [] ListOffPokemons()
+        {
+            Console.WriteLine("hoeveel pokemons wil je genereren?");
+            int amount = Convert.ToInt32(Console.ReadLine());
+            PokemonCard [] newPokemon = new PokemonCard [amount];
+            for (int i =0; i < amount; i++)
+            {
+                newPokemon[i] = GeneratorPokemon();
+            }
+            return newPokemon;
+        }
+        public static int Battle(PokemonCard poke1, PokemonCard poke2)
+        {
+            int result = 0;
+            AmountBattles++;
+            if (poke1 == null)
+            {
+                if (poke2 == null)
+                {
+                    result = 0;
+                    Console.WriteLine($"Bijde pokemons bestaan niet");
+                }
+                result = 2;
+                Console.WriteLine($"De eerste pokemon bestaat niet");
+            }
+            else if (poke2 == null)
+            {
+                result = 1;
+                Console.WriteLine($"De 2de pokemon bestaat niet");
+            }
+            else
+            {
+                int healthPoke1 = poke1.HP_Full - (poke2.Attack_Full - poke1.Defense_Full);
+                int healthPoke2 = poke2.HP_Full - (poke1.Attack_Full - poke2.Defense_Full);
+
+                if (healthPoke1 > healthPoke2)
+                {
+                    Console.WriteLine($"{poke1.Name} wint van {poke2.Name}");
+                    poke1.LevelUp();
+                }
+                else if (healthPoke1 < healthPoke2)
+                {
+                    Console.WriteLine($"{poke2.Name} wint van {poke1.Name}");
+                    poke2.LevelUp();
+                }
+                else
+                {
+                    AmountOffDraws++;
+                    Console.WriteLine($"Gelijkspel");
+                }
+            }
+            return result;
         }
     }
 }
