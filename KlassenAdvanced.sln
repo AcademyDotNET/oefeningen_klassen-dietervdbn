@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeelKaarten", "SpeelKaarte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentOrganizer", "StudentOrganizer\StudentOrganizer.csproj", "{6FAD8B5A-C9FC-44CB-B466-69945B906AEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookmarkManager", "BookmarkManager\BookmarkManager.csproj", "{BB894559-ADCE-4D06-95F8-CBD3AEA97218}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6FAD8B5A-C9FC-44CB-B466-69945B906AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FAD8B5A-C9FC-44CB-B466-69945B906AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FAD8B5A-C9FC-44CB-B466-69945B906AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB894559-ADCE-4D06-95F8-CBD3AEA97218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB894559-ADCE-4D06-95F8-CBD3AEA97218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB894559-ADCE-4D06-95F8-CBD3AEA97218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB894559-ADCE-4D06-95F8-CBD3AEA97218}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
