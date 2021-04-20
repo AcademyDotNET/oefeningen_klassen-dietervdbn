@@ -19,9 +19,15 @@ namespace StudentOrganizer
             int prog = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("wat is je score voor communicatie?");
             int web = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("in welke klas zit je?");
-            string klas = Console.ReadLine();
-            switch (klas)
+            //klassen ingeven
+            Console.WriteLine("in welke klas zit je?");            
+            Klas InputKlas;
+            while (!Klas.TryParse(Console.ReadLine().ToUpper(), out InputKlas))
+            {
+                Console.WriteLine($"Geef een valide klas");
+            }
+            Klassen = InputKlas;
+            /*switch (klas)
             {
                 case "EA1":
                     Klassen = Klas.EA1;
@@ -60,7 +66,7 @@ namespace StudentOrganizer
                     Klassen = Klas.EB6;
                     break;
 
-            }
+            }*/
             Naam = naam;
             Leeftijd = leeftijd;
             PuntenCommunicatie = com;
