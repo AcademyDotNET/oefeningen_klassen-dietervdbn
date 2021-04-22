@@ -18,7 +18,7 @@ namespace BookmarkManager
             Nummer = nummer;
         }
         private string Name { get; set; }
-        private string Url { get; set; }
+        public string Url { get; set; }
         private int Nummer { get; set; }
         public static void ToonOverzicht (Bookmark[] websites)
         {
@@ -35,9 +35,13 @@ namespace BookmarkManager
             {
                 if (websites[i].Nummer == nummer)
                 {
-                    Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", websites[i].Url);
+                    websites[i].Opensite(websites[i]);
                 }
             }
+        }
+        public virtual void Opensite(Bookmark bookmark)
+        {
+            Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", bookmark.Url);
         }
     }
 }
