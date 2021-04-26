@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dierenrijk", "dierenrijk\dierenrijk.csproj", "{0D75BA03-26B9-4787-B305-B4D997C01149}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dierenrijk", "dierenrijk\dierenrijk.csproj", "{0D75BA03-26B9-4787-B305-B4D997C01149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziekenhuis", "Ziekenhuis\Ziekenhuis.csproj", "{E540F443-4A02-4D1A-83DE-2742520F9C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ziekenhuis", "Ziekenhuis\Ziekenhuis.csproj", "{E540F443-4A02-4D1A-83DE-2742520F9C3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balspel", "Balspel\Balspel.csproj", "{0E168263-2FEA-44E2-8D04-2538D3FB5781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Balspel", "Balspel\Balspel.csproj", "{0E168263-2FEA-44E2-8D04-2538D3FB5781}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book", "Book\Book.csproj", "{A6A0FEC7-AC93-4803-8C9E-C5C3301013B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money", "Money\Money.csproj", "{2EAD3195-5483-4039-BFCB-01C1441902AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricFigures", "GeometricFigures\GeometricFigures.csproj", "{53D942A3-5F6D-43EF-933D-C81527DD35CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dierentuin", "Dierentuin\Dierentuin.csproj", "{04158609-E51A-446D-9162-1215017BFB61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{0E168263-2FEA-44E2-8D04-2538D3FB5781}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E168263-2FEA-44E2-8D04-2538D3FB5781}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E168263-2FEA-44E2-8D04-2538D3FB5781}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A0FEC7-AC93-4803-8C9E-C5C3301013B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A0FEC7-AC93-4803-8C9E-C5C3301013B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A0FEC7-AC93-4803-8C9E-C5C3301013B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A0FEC7-AC93-4803-8C9E-C5C3301013B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAD3195-5483-4039-BFCB-01C1441902AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAD3195-5483-4039-BFCB-01C1441902AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAD3195-5483-4039-BFCB-01C1441902AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAD3195-5483-4039-BFCB-01C1441902AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D942A3-5F6D-43EF-933D-C81527DD35CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D942A3-5F6D-43EF-933D-C81527DD35CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D942A3-5F6D-43EF-933D-C81527DD35CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D942A3-5F6D-43EF-933D-C81527DD35CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04158609-E51A-446D-9162-1215017BFB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04158609-E51A-446D-9162-1215017BFB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04158609-E51A-446D-9162-1215017BFB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04158609-E51A-446D-9162-1215017BFB61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

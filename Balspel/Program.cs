@@ -30,8 +30,7 @@ namespace Balspel
 
                 Console.Clear();
 
-                //Ball
-
+                //Ball's
                 for (int i = 0; i < ballen.Count; i++)
                 {
                     ballen[i].Update();
@@ -47,6 +46,18 @@ namespace Balspel
 
                 player.Update();
                 player.Draw();
+
+                //Check collisions for balls
+                foreach (Ball ball in ballen)
+                {
+                    for (int j = 0; j < ballen.Count; j++)
+                    {
+                        if (Ball.CheckHit(ballen[j], ball))
+                        {
+                            ballenTegenMekaar += 1;
+                        }
+                    }
+                }
 
                 //Check collisions
                 for (int j = 0; j < ballen.Count; j++)
@@ -65,19 +76,6 @@ namespace Balspel
                         Console.ReadLine();
                     }
                 }
-                //Check collisions for balls
-                foreach (Ball ball in ballen)
-                {
-                    for (int j = 0; j < ballen.Count; j++)
-                    {
-                        if (Ball.CheckHit(ballen[j], ball))
-                        {
-                            ballenTegenMekaar += 1;
-                        }
-                    }
-                }
-               
-
                 System.Threading.Thread.Sleep(100);
                 timer++;
             }

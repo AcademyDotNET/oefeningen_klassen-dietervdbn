@@ -6,6 +6,9 @@ namespace dierenrijk
 {
     class Iguana : Reptile
     {
+        public Iguana(string naam) : base(naam)
+        {
+        }
         public bool VerranderdVanKleur { get; set; }
         public override void ToonInfo()
         {
@@ -18,6 +21,11 @@ namespace dierenrijk
             {
                 Console.WriteLine($"Dit dier kan zijn huidskleur niet varranderen");
             }
+        }
+        public override string Zegt()
+        {
+            string zegt = ($"{Name} zegt: kzou et ni weten");
+            return zegt;
         }
     }
 }

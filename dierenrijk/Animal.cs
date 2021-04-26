@@ -4,9 +4,14 @@ using System.Text;
 
 namespace dierenrijk
 {
-    class Animal
+    abstract class Animal
     {
+        public Animal(string naam)
+        {
+            Name = naam;
+        }
         public bool BeweegVoort { get; set; }
+        public string Name { get; set; }
 
         public virtual void ToonInfo()
         {
@@ -19,5 +24,6 @@ namespace dierenrijk
                 Console.WriteLine($"Dit dier kan zich niet verplaatsen");
             }
         }
+        public abstract string Zegt();
     }
 }

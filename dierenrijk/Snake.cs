@@ -6,6 +6,9 @@ namespace dierenrijk
 {
     class Snake : Reptile
     {
+        public Snake(string naam) : base(naam)
+        {
+        }
         public bool Verveld { get; set; }
         public override void ToonInfo()
         {
@@ -18,6 +21,11 @@ namespace dierenrijk
             {
                 Console.WriteLine($"Dit dier kan niet Vervellen");
             }
+        }
+        public override string Zegt()
+        {
+            string zegt = ($"{Name} zegt: sssssssssssss");
+            return zegt;
         }
     }
 }
