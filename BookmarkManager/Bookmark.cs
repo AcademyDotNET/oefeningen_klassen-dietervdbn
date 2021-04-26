@@ -17,7 +17,7 @@ namespace BookmarkManager
             Url = url;
             Nummer = nummer;
         }
-        private string Name { get; set; }
+        public string Name { get; set; }
         public string Url { get; set; }
         private int Nummer { get; set; }
         public static void ToonOverzicht (Bookmark[] websites)
@@ -42,6 +42,10 @@ namespace BookmarkManager
         public virtual void Opensite(Bookmark bookmark)
         {
             Process.Start(@"C:\Program Files\Google\Chrome\Application\chrome.exe", bookmark.Url);
+        }
+        public override string? ToString()
+        {
+            return ($"{Name} ({Url})");
         }
     }
 }

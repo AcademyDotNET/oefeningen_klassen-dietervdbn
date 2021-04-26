@@ -20,6 +20,12 @@ namespace BookmarkManager
             int keuze = Convert.ToInt32(Console.ReadLine());
             HiddenBookmark.SiteKeuze(websites, keuze);
             
+
+            HiddenBookmark hbm = new HiddenBookmark(3);
+            Bookmark bm = new Bookmark(5);
+            Console.WriteLine(hbm);
+            Console.WriteLine(bm);
+
         }
     }
 }
