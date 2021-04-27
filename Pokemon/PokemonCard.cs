@@ -282,6 +282,8 @@ namespace Pokemon
             AmountOffNewPokemons++;
             PokemonCard newPokemon = new PokemonCard();
             Random rand = new Random();
+            Console.WriteLine("wat is de naam van de pokemon?");
+            newPokemon.Name = Console.ReadLine();
             newPokemon.HP_Base = rand.Next(10, 51);
             newPokemon.Attack_Base = rand.Next(1, 21);
             newPokemon.Defense_Base = rand.Next(1, 21);
@@ -300,6 +302,11 @@ namespace Pokemon
                 newPokemon[i] = GeneratorPokemon();
             }
             return newPokemon;
+        }
+
+        public override string? ToString()
+        {
+            return($"{Name} {Level} {HP_Base} {Speed_Base} {Attack_Base} {Defense_Base} {SpecialAttack_Base} {SpecialDefense_Base} {HP_Full} {Speed_Full} {Attack_Full} {Defense_Full} {SpecialAttack_Full} {SpecialDefens_Full}");
         }
         public static int Battle(PokemonCard poke1, PokemonCard poke2)
         {
@@ -342,6 +349,36 @@ namespace Pokemon
                 }
             }
             return result;
+        }
+        public override bool Equals(Object poke1)
+        {
+            PokemonCard poke2=(PokemonCard)poke1;
+            if (Level == poke2.Level)
+            {
+                if (Name == poke2.Name)
+                {
+                    if (HP_Base == poke2.HP_Base)
+                    {
+                        if (Speed_Base == poke2.Speed_Base)
+                        {
+                            if (Attack_Base == poke2.Attack_Base)
+                            {
+                                if (Defense_Base == poke2.Defense_Base)
+                                {
+                                    if (SpecialAttack_Base == poke2.SpecialAttack_Base)
+                                    { 
+                                        if (SpecialDefense_Base == poke2.SpecialDefense_Base)
+                                        {
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return false;
         }
     }
 }

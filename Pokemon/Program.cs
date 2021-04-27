@@ -11,7 +11,7 @@ namespace Pokemon
             PokemonCard charmander = new PokemonCard();
 
             PokemonCard pikachu = new PokemonCard() { HP_Base = 40, Name = "Pikachu" };
-
+            /*
             bulbasaur.ShowInfo();
             LevelPokemon(bulbasaur);
 
@@ -32,7 +32,9 @@ namespace Pokemon
                 }
             }
             PokemonCard.ListOffPokemons();
-            PokemonCard.Info();
+            PokemonCard.Info();*/
+            string test = pikachu.ToString();
+            Console.WriteLine(test);
         }
     }
 }
