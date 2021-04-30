@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "umlNaarCode", "umlNaarCode\umlNaarCode.csproj", "{25289C21-DD38-43B1-A295-CE01997ACBCE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Politiek", "Politiek\Politiek.csproj", "{AB2A7E37-FCC6-4988-BD0F-F5A6403F20D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moederbord", "Moederbord\Moederbord.csproj", "{C65B1EFA-D229-4A73-BF5D-DE529FF841DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EenEigenHuis", "EenEigenHuis\EenEigenHuis.csproj", "{E845C6EB-9136-4571-B733-7140FE6CF711}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic", "Magic\Magic.csproj", "{B4918FEE-68B3-4A1F-80AA-55B5F33A647B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapmaker", "Mapmaker\Mapmaker.csproj", "{34000CE9-9395-4099-96EC-C55976D0FA68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{3534FF4C-132B-400D-9CB9-49EE1B64270C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{25289C21-DD38-43B1-A295-CE01997ACBCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25289C21-DD38-43B1-A295-CE01997ACBCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25289C21-DD38-43B1-A295-CE01997ACBCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25289C21-DD38-43B1-A295-CE01997ACBCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2A7E37-FCC6-4988-BD0F-F5A6403F20D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2A7E37-FCC6-4988-BD0F-F5A6403F20D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2A7E37-FCC6-4988-BD0F-F5A6403F20D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2A7E37-FCC6-4988-BD0F-F5A6403F20D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C65B1EFA-D229-4A73-BF5D-DE529FF841DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C65B1EFA-D229-4A73-BF5D-DE529FF841DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C65B1EFA-D229-4A73-BF5D-DE529FF841DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C65B1EFA-D229-4A73-BF5D-DE529FF841DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E845C6EB-9136-4571-B733-7140FE6CF711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E845C6EB-9136-4571-B733-7140FE6CF711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E845C6EB-9136-4571-B733-7140FE6CF711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E845C6EB-9136-4571-B733-7140FE6CF711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4918FEE-68B3-4A1F-80AA-55B5F33A647B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4918FEE-68B3-4A1F-80AA-55B5F33A647B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4918FEE-68B3-4A1F-80AA-55B5F33A647B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4918FEE-68B3-4A1F-80AA-55B5F33A647B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34000CE9-9395-4099-96EC-C55976D0FA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34000CE9-9395-4099-96EC-C55976D0FA68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34000CE9-9395-4099-96EC-C55976D0FA68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34000CE9-9395-4099-96EC-C55976D0FA68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3534FF4C-132B-400D-9CB9-49EE1B64270C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3534FF4C-132B-400D-9CB9-49EE1B64270C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3534FF4C-132B-400D-9CB9-49EE1B64270C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3534FF4C-132B-400D-9CB9-49EE1B64270C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D46B1B5E-F8BC-474A-AD04-13000DCB8A3A}
+	EndGlobalSection
+EndGlobal
